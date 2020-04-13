@@ -3,6 +3,8 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import router from './router'
 import App from './App.vue'
+import './assets/css/base.css'
+import './assets/css/index.css'
 
 Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
