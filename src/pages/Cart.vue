@@ -58,12 +58,14 @@
               </ul>
             </div>
             <ul class="cart-item-list">
-              <li v-for="item in cartList"
+              <li v-for="(item, index) in cartList"
                   :key="item.productId">
                 <div class="cart-tab-1">
                   <div class="cart-item-check">
                     <a href="javascipt:;"
-                       class="checkbox-btn item-check-btn" :class="{'checked':item.checked}">
+                       class="checkbox-btn item-check-btn"
+                       :class="{'checked':item.checked}"
+                       @click="editCart('checked',item)">
                       <svg class="icon icon-ok">
                         <use xlink:href="#icon-ok"></use>
                       </svg>
@@ -83,20 +85,23 @@
                   <div class="item-quantity">
                     <div class="select-self select-self-open">
                       <div class="select-self-area">
-                        <a class="input-sub">-</a>
+                        <a class="input-sub"
+                           @click="editCart('minus',item)">-</a>
                         <span class="select-ipt">{{item.productNum}}</span>
-                        <a class="input-add">+</a>
+                        <a class="input-add"
+                           @click="editCart('add',item)">+</a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="cart-tab-4">
-                  <div class="item-price-total">￥{{item.productPrice*item.productNum}}元</div>
+                  <div class="item-price-total">{{(item.productPrice*item.productNum) | currency}}</div>
                 </div>
                 <div class="cart-tab-5">
                   <div class="cart-item-opration">
                     <a href="javascript:;"
-                       class="item-edit-btn">
+                       class="item-edit-btn"
+                       @click="delCartConfirm(index)">
                       <svg class="icon icon-del">
                         <use xlink:href="#icon-del"></use>
                       </svg>
@@ -133,7 +138,20 @@
       </div>
     </div>
     <nav-footer />
-    <Model />
+    <Model :mdShow="modalConfirm"
+           @close="closeModal">
+      <template v-slot:message>
+        <p>你确认要删除此条数据吗？</p>
+      </template>
+      <template v-slot:btnGroup>
+        <a class="btn btn--m"
+           href="javascript:;"
+           @click="delCart">确认</a>
+        <a class="btn btn--m btn--red"
+           href="javascript:;"
+           @click="modalConfirm=false">关闭</a>
+      </template>
+    </Model>
   </div>
 </template>
 
@@ -145,6 +163,8 @@ export default {
   name: 'Cart',
   data () {
     return {
+      modalConfirm: false,//弹窗显示属性
+      delIndex: "",//准备删除的对象
       cartList: []
     }
   },
@@ -156,6 +176,14 @@ export default {
   mounted () {
     this.init();
   },
+  filters: {
+    currency (value) {
+      if (!value) {
+        return 0.00
+      }
+      return "￥" + value.toFixed(2) + '元';
+    }
+  },
   methods: {
     init () {
       this.axios.get("/mock/cart.json").then((response) => {
@@ -163,6 +191,30 @@ export default {
       }).catch((err) => {
         console.log('err', err);
       });
+    },
+    editCart (type, item) {
+      console.log(type);
+      if (type === 'add') {
+        item.productNum++;
+      } else if (type === "minus") {
+        item.productNum--;
+      } else {
+        item.checked = !item.checked;
+      }
+    },
+    delCartConfirm (index) {
+      this.delIndex = index;
+      this.modalConfirm = true;
+    },
+    closeModal () {
+      this.modalConfirm = false;
+    },
+    //删除购物车数据
+    delCart () {
+      if (this.delIndex !== "" && this.delIndex !== null && this.cartList !== undefined) {
+        this.cartList.splice(this.delIndex, 1);
+      }
+      this.modalConfirm = false;
     }
   }
 };
