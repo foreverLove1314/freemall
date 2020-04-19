@@ -116,8 +116,10 @@
           <div class="cart-foot-inner">
             <div class="cart-foot-l">
               <div class="item-all-check">
-                <a href="javascipt:;">
-                  <span class="checkbox-btn item-check-btn check">
+                <a href="javascipt:;"
+                   @click="toggleCheckAll">
+                  <span class="checkbox-btn item-check-btn"
+                        :class="{'check':checkAllFlag}">
                     <svg class="icon icon-ok">
                       <use xlink:href="#icon-ok" /></svg>
                   </span>
@@ -127,10 +129,12 @@
             </div>
             <div class="cart-foot-r">
               <div class="item-total">
-                总价: <span class="total-price">￥89.00元</span>
+                总价: <span class="total-price">{{totalPrice | currency}}</span>
               </div>
               <div class="btn-wrap">
-                <a class="btn btn--red btn--dis">结算</a>
+                <a class="btn btn--red"
+                   :class="{'btn--dis':!checkCount}"
+                   @click="checkOut">结算</a>
               </div>
             </div>
           </div>
@@ -176,10 +180,32 @@ export default {
   mounted () {
     this.init();
   },
+  computed: {
+    checkAllFlag () {
+      return this.cartList.every((item) => {
+        return item.checked;
+      });
+    },
+    //判断购物车是否有选中的商品
+    checkCount () {
+      return this.cartList.some((item) => {
+        return item.checked;
+      });
+    },
+    totalPrice () {
+      let money = 0;
+      this.cartList.forEach((item) => {
+        if (item.checked) {
+          money += item.productPrice * item.productNum;
+        }
+      })
+      return money;
+    }
+  },
   filters: {
     currency (value) {
       if (!value) {
-        return 0.00
+        return "0.00";
       }
       return "￥" + value.toFixed(2) + '元';
     }
@@ -193,11 +219,12 @@ export default {
       });
     },
     editCart (type, item) {
-      console.log(type);
       if (type === 'add') {
         item.productNum++;
       } else if (type === "minus") {
-        item.productNum--;
+        if (item.productNum >= 1) {
+          item.productNum--;
+        }
       } else {
         item.checked = !item.checked;
       }
@@ -215,6 +242,20 @@ export default {
         this.cartList.splice(this.delIndex, 1);
       }
       this.modalConfirm = false;
+    },
+    //全选和反选
+    toggleCheckAll () {
+      let flag = !this.checkAllFlag;
+      this.cartList.forEach((item) => {
+        item.checked = flag;
+      });
+    },
+    checkOut () {
+      if (this.checkCount) {
+        this.$router.push({
+          path: "/address"
+        })
+      }
     }
   }
 };
