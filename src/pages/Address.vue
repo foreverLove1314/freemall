@@ -12,40 +12,45 @@
     </div>
     <!-- 地址确认 -->
     <div class="checkout-page">
-      <svg style="position: absolute; width: 0; height: 0; overflow: hidden;"
-           version="1.1"
-           xmlns="http://www.w3.org/2000/svg"
-           xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg
+        style="position: absolute; width: 0; height: 0; overflow: hidden;"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
         <defs>
-          <symbol id="icon-add"
-                  viewBox="0 0 31 32">
+          <symbol id="icon-add" viewBox="0 0 31 32">
             <title>add</title>
-            <path class="path1"
-                  d="M30.745 15.152h-14.382v-14.596c0-0.308-0.243-0.557-0.543-0.557s-0.543 0.249-0.543 0.557v14.596h-14.665c-0.3 0-0.543 0.249-0.543 0.557s0.243 0.557 0.543 0.557h14.665v15.177c0 0.307 0.243 0.557 0.543 0.557s0.543-0.249 0.543-0.557v-15.177h14.382c0.3 0 0.543-0.249 0.543-0.557s-0.243-0.557-0.543-0.557z">
-            </path>
+            <path
+              class="path1"
+              d="M30.745 15.152h-14.382v-14.596c0-0.308-0.243-0.557-0.543-0.557s-0.543 0.249-0.543 0.557v14.596h-14.665c-0.3 0-0.543 0.249-0.543 0.557s0.243 0.557 0.543 0.557h14.665v15.177c0 0.307 0.243 0.557 0.543 0.557s0.543-0.249 0.543-0.557v-15.177h14.382c0.3 0 0.543-0.249 0.543-0.557s-0.243-0.557-0.543-0.557z"
+            ></path>
           </symbol>
-          <symbol id="icon-edit"
-                  viewBox="0 0 32 32">
+          <symbol id="icon-edit" viewBox="0 0 32 32">
             <title>edit</title>
-            <path class="path1"
-                  d="M28.287 8.51l-4.805-4.806 0.831-0.831c0.472-0.472 1.086-0.777 1.564-0.777 0.248 0 0.452 0.082 0.622 0.253l3.143 3.144c0.539 0.54 0.133 1.529-0.524 2.186l-0.831 0.831zM26.805 9.992l-1.138 1.138-4.805-4.806 1.138-1.138 4.805 4.806zM24.186 12.612l-14.758 14.762-4.805-4.806 14.758-14.762 4.805 4.806zM7.379 28.288l-4.892 1.224 1.223-4.894 3.669 3.67zM31.123 4.011l-3.143-3.144c-0.567-0.567-1.294-0.867-2.103-0.867-1.036 0-2.174 0.52-3.045 1.391l-20.429 20.436c-0.135 0.134-0.23 0.302-0.276 0.487l-2.095 8.385c-0.089 0.355 0.017 0.736 0.276 0.995 0.198 0.198 0.461 0.307 0.741 0.307 0.085 0 0.171-0.010 0.254-0.031l8.381-2.096c0.185-0.047 0.354-0.142 0.487-0.276l20.43-20.436c1.409-1.41 2.042-3.632 0.524-5.15v0z">
-            </path>
+            <path
+              class="path1"
+              d="M28.287 8.51l-4.805-4.806 0.831-0.831c0.472-0.472 1.086-0.777 1.564-0.777 0.248 0 0.452 0.082 0.622 0.253l3.143 3.144c0.539 0.54 0.133 1.529-0.524 2.186l-0.831 0.831zM26.805 9.992l-1.138 1.138-4.805-4.806 1.138-1.138 4.805 4.806zM24.186 12.612l-14.758 14.762-4.805-4.806 14.758-14.762 4.805 4.806zM7.379 28.288l-4.892 1.224 1.223-4.894 3.669 3.67zM31.123 4.011l-3.143-3.144c-0.567-0.567-1.294-0.867-2.103-0.867-1.036 0-2.174 0.52-3.045 1.391l-20.429 20.436c-0.135 0.134-0.23 0.302-0.276 0.487l-2.095 8.385c-0.089 0.355 0.017 0.736 0.276 0.995 0.198 0.198 0.461 0.307 0.741 0.307 0.085 0 0.171-0.010 0.254-0.031l8.381-2.096c0.185-0.047 0.354-0.142 0.487-0.276l20.43-20.436c1.409-1.41 2.042-3.632 0.524-5.15v0z"
+            ></path>
           </symbol>
-          <symbol id="icon-del"
-                  viewBox="0 0 32 32">
+          <symbol id="icon-del" viewBox="0 0 32 32">
             <title>delete</title>
-            <path class="path1"
-                  d="M11.355 4.129v-2.065h9.29v2.065h-9.29zM6.194 29.935v-23.742h19.613v23.742h-19.613zM30.968 4.129h-8.258v-3.097c0-0.569-0.463-1.032-1.032-1.032h-11.355c-0.569 0-1.032 0.463-1.032 1.032v3.097h-8.258c-0.569 0-1.032 0.463-1.032 1.032s0.463 1.032 1.032 1.032h3.097v24.774c0 0.569 0.463 1.032 1.032 1.032h21.677c0.569 0 1.032-0.463 1.032-1.032v-24.774h3.097c0.569 0 1.032-0.463 1.032-1.032s-0.463-1.032-1.032-1.032v0z">
-            </path>
-            <path class="path2"
-                  d="M10.323 9.806c-0.569 0-1.032 0.463-1.032 1.032v14.452c0 0.569 0.463 1.032 1.032 1.032s1.032-0.463 1.032-1.032v-14.452c0-0.569-0.463-1.032-1.032-1.032z">
-            </path>
-            <path class="path3"
-                  d="M16 9.806c-0.569 0-1.032 0.463-1.032 1.032v14.452c0 0.569 0.463 1.032 1.032 1.032s1.032-0.463 1.032-1.032v-14.452c0-0.569-0.463-1.032-1.032-1.032z">
-            </path>
-            <path class="path4"
-                  d="M21.677 9.806c-0.569 0-1.032 0.463-1.032 1.032v14.452c0 0.569 0.463 1.032 1.032 1.032s1.032-0.463 1.032-1.032v-14.452c0-0.569-0.463-1.032-1.032-1.032z">
-            </path>
+            <path
+              class="path1"
+              d="M11.355 4.129v-2.065h9.29v2.065h-9.29zM6.194 29.935v-23.742h19.613v23.742h-19.613zM30.968 4.129h-8.258v-3.097c0-0.569-0.463-1.032-1.032-1.032h-11.355c-0.569 0-1.032 0.463-1.032 1.032v3.097h-8.258c-0.569 0-1.032 0.463-1.032 1.032s0.463 1.032 1.032 1.032h3.097v24.774c0 0.569 0.463 1.032 1.032 1.032h21.677c0.569 0 1.032-0.463 1.032-1.032v-24.774h3.097c0.569 0 1.032-0.463 1.032-1.032s-0.463-1.032-1.032-1.032v0z"
+            ></path>
+            <path
+              class="path2"
+              d="M10.323 9.806c-0.569 0-1.032 0.463-1.032 1.032v14.452c0 0.569 0.463 1.032 1.032 1.032s1.032-0.463 1.032-1.032v-14.452c0-0.569-0.463-1.032-1.032-1.032z"
+            ></path>
+            <path
+              class="path3"
+              d="M16 9.806c-0.569 0-1.032 0.463-1.032 1.032v14.452c0 0.569 0.463 1.032 1.032 1.032s1.032-0.463 1.032-1.032v-14.452c0-0.569-0.463-1.032-1.032-1.032z"
+            ></path>
+            <path
+              class="path4"
+              d="M21.677 9.806c-0.569 0-1.032 0.463-1.032 1.032v14.452c0 0.569 0.463 1.032 1.032 1.032s1.032-0.463 1.032-1.032v-14.452c0-0.569-0.463-1.032-1.032-1.032z"
+            ></path>
           </symbol>
         </defs>
       </svg>
@@ -71,26 +76,43 @@
           <div class="addr-list-wrap">
             <div class="addr-list">
               <ul>
-                <li class="check">
+                <li
+                  :class="{ check: checkIndex === index }"
+                  v-for="(item, index) in addressFilter"
+                  :key="index"
+                  @click="checkIndex = index"
+                >
                   <dl>
-                    <dt>河畔一角</dt>
-                    <dd class="address">北京市昌平区</dd>
-                    <dd class="tel">17600000000</dd>
+                    <dt>{{ item.userName }}</dt>
+                    <dd class="address">{{ item.streetName }}</dd>
+                    <dd class="tel">{{ item.tel }}</dd>
                   </dl>
                   <div class="addr-opration addr-del">
                     <!-- 删除地址 -->
-                    <a href="javascript:;"
-                       class="addr-del-btn">
+                    <a
+                      href="javascript:;"
+                      class="addr-del-btn"
+                      @click="delAddressConfirm(item.addressId)"
+                    >
                       <svg class="icon icon-del">
                         <use xlink:href="#icon-del"></use>
                       </svg>
                     </a>
                   </div>
-                  <div class="addr-opration addr-set-default">
-                    <a href="javascript:;"
-                       class="addr-set-default-btn"><i>设为默认</i></a>
+                  <div
+                    class="addr-opration addr-set-default"
+                    v-if="!item.isDefault"
+                  >
+                    <a
+                      href="javascript:;"
+                      class="addr-set-default-btn"
+                      @click="setDefault(item.addressId)"
+                      ><i>设为默认</i></a
+                    >
                   </div>
-                  <div class="addr-opration addr-default">默认地址</div>
+                  <div class="addr-opration addr-default" v-else>
+                    默认地址
+                  </div>
                 </li>
 
                 <li class="addr-new">
@@ -107,8 +129,12 @@
             </div>
 
             <div class="shipping-addr-more">
-              <a class="addr-more-btn up-down-btn open"
-                 href="javascript:;">
+              <a
+                class="addr-more-btn up-down-btn"
+                href="javascript:;"
+                @click="expand"
+                :class="{ open: limit > 5 }"
+              >
                 查看更多
                 <i class="i-up-down">
                   <i class="i-up-down-l"></i>
@@ -136,28 +162,109 @@
             </div>
           </div>
           <div class="next-btn-wrap">
-            <a class="btn btn--m btn--red"
-               href="#">下一步</a>
+            <a class="btn btn--m btn--red" href="javascript:;" @click="next"
+              >下一步</a
+            >
           </div>
         </div>
       </div>
     </div>
     <nav-footer />
-    <Model />
+    <Model :mdShow="modalConfirm" @close="modalConfirm = false">
+      <template v-slot:message>
+        <p>确认结算？</p>
+      </template>
+      <template v-slot:btnGroup>
+        <a class="btn btn--m" href="javascript:;" @click="checkoutConfirm"
+          >确认</a
+        >
+        <a
+          class="btn btn--m btn--red"
+          href="javascript:;"
+          @click="modalConfirm = false"
+          >关闭</a
+        >
+      </template>
+    </Model>
   </div>
 </template>
 
 <script>
-import NavHeader from './../components/Header'
-import NavFooter from './../components/Footer'
-import Model from './../components/Model'
+import NavHeader from './../components/Header';
+import NavFooter from './../components/Footer';
+import Model from './../components/Model';
 export default {
   name: 'Address',
+  data() {
+    return {
+      limit: 3,
+      checkIndex: 0,
+      addressList: [],
+      modalConfirm: false,
+      delIndex: '', //准备删除的对象
+    };
+  },
   components: {
     NavHeader,
     NavFooter,
-    Model
-  }
+    Model,
+  },
+  computed: {
+    addressFilter() {
+      return this.addressList.slice(0, this.limit);
+    },
+  },
+  mounted() {
+    this.init();
+  },
+  methods: {
+    init() {
+      this.axios
+        .get('/mock/address.json')
+        .then((result) => {
+          let res = result.data;
+          this.addressList = res.data;
+          res.data.forEach((item, index) => {
+            if (item.isDefault) {
+              this.checkIndex = index;
+            }
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    expand() {
+      if (this.limit === 3) {
+        this.limit = 5;
+      } else {
+        this.limit = 3;
+      }
+    },
+    setDefault(addressId) {
+      this.addressList.map((item) => {
+        if (item.addressId === addressId) {
+          item.isDefault = true;
+        } else {
+          item.isDefault = false;
+        }
+      });
+    },
+    delAddressConfirm(addressId) {
+      this.addressList.map((item, index) => {
+        if (item.addressId === addressId) {
+          this.addressList.splice(0, index);
+        }
+      });
+    },
+    next() {
+      this.modalConfirm = true;
+    },
+    //确认结算
+    checkoutConfirm() {
+      this.modalConfirm = false;
+    },
+  },
 };
 </script>
 
